@@ -21,6 +21,7 @@ body {
 			update : update,
 			render : render
 		});
+		var themesound;
 		var player;
 		var greenEnemies;
 		var starfield;
@@ -46,6 +47,7 @@ body {
 			game.load.spritesheet('explosion', '/assets/explode.png', 128, 128);
   		game.load.audio('gunsound', 'assets/gun.mp3');
 			game.load.audio('explosionsound', 'assets/explosion.mp3');
+			game.load.audio('themesound', 'assets/themesound.mp3');
 
 
 		}
@@ -55,6 +57,10 @@ body {
 
 			explosionsound = game.add.audio('explosionsound');
     	gun = game.add.audio('gunsound');
+			themesound=this.add.audio('themesound');
+			themesound.play();
+
+
 
 
 			game.scale.pageAlignHorizontally = true;
@@ -196,6 +202,10 @@ body {
 			shipTrail.x = player.x - 20;
 		    //  Check collisions
 			game.physics.arcade.overlap(player, greenEnemies, shipCollide, null, this);
+
+			if( !themesound.isPlaying) {
+                themesound.play();
+            }
 		}
     function shipCollide(player, enemy) {
       var explosion = explosions.getFirstExists(false);
@@ -211,6 +221,7 @@ body {
 		function fireBullet() {
 			//  To avoid them being allowed to fire too fast we set a time limit
 			if (game.time.now > bulletTimer) {
+				gun.play();
 				var BULLET_SPEED = 400;
 				var BULLET_SPACING = 250;
 				//  Grab the first bullet we can from the pool
