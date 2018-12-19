@@ -437,10 +437,10 @@ var Level2 = {
   render: function() {
     // for (var i = 0; i < greenEnemies.length; i++)
     //   {
-    game.debug.body(gate);
+   // game.debug.body(gate);
 
     //}
-    game.debug.body(player);
+   // game.debug.body(player);
   },
 
 
