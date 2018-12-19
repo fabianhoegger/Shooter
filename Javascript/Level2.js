@@ -304,11 +304,11 @@ var Level2 = {
 
 
     game.time.events.add(1000, launchGreenEnemy);
-    flagtext = game.add.text(game.world.centerX, game.world.centerY, flag2, {
-      font: "65px Arial",
-      fill: "#ff0044",
-      align: "center"
-    });
+   // flagtext = game.add.text(game.world.centerX, game.world.centerY, flag2, {
+     // font: "65px Arial",
+    //  fill: "#ff0044",
+    //  align: "center"
+    //});
     //FONT CREATION
     life = game.add.bitmapText(game.world.width - 300, 10, 'spacefont', player.health + '%', 50);
     liferender();
