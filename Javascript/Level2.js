@@ -330,7 +330,7 @@ var Level2 = {
   },
 
   update: function() {
-    flagtext.text = flag2;
+    //flagtext.text = flag2;
     //  Scroll the background
     bluesky.tilePosition.x -= 2;
     //  Reset the player, then check for movement keys
