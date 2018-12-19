@@ -5,7 +5,7 @@ var Level1 = {
   preload: function() {
     //  We need this because the assets are on github pages
    //   Remove the next 2 lines if running locally
-   // game.load.baseURL = 'https://fabianhoegger.github.io/Shooter/';
+   game.load.baseURL = 'https://fabianhoegger.github.io/Shooter/';
     game.load.crossOrigin = 'anonymous';
     game.load.image('starfield', 'assets/starfield.png');
 
