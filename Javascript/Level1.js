@@ -324,7 +324,7 @@ var Level1 = {
   },
 
   update: function() {
-    flagtext.text = flag2;
+   // flagtext.text = flag2;
     //  Scroll the background
     starfield.tilePosition.x -= 2;
     //  Reset the player, then check for movement keys
