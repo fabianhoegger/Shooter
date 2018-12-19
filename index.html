@@ -308,7 +308,7 @@ function increaseScore(player, coin) {
 }
 
 function spawnHealth(enemy) {
-  var luck = game.rnd.integerInRange(0, 2);
+  var luck = game.rnd.integerInRange(0, 3);
   var pack;
   if (luck == 1) {
     pack = healthpack.create(enemy.body.x + 15, enemy.body.y + 15, 'healthpack', 0);
@@ -322,7 +322,7 @@ function increaseHealth(player, hpack) {
 }
 
 function spawnPickup(enemy) {
-  var luck = game.rnd.integerInRange(2, 3);
+  var luck = game.rnd.integerInRange(0, 3);
   var pack;
   if (luck == 2) {
     pack = pickups.create(enemy.body.x + 15, enemy.body.y + 15, 'pickup', 0);
