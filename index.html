@@ -142,7 +142,7 @@ function restart() {
 
 function launchBoss() {
   boss.reset(player.body.x + 700, player.body.y);
-  boss.health = 200;
+  boss.health = 2000;
   bossBulletTimer = game.time.now + 5000;
   timeout2 = game.time.events.loop(2000, bossFire, this);
   game.time.events.remove(greenEnemyLaunchTimer);
@@ -247,10 +247,8 @@ function launchBlueEnemy() {
 function bossFire() {
 
   plasblt = plasmabullets.getFirstExists(false);
-  if (boss.alive && plasblt && game.time.now > firingDelay2 + 2000) {
-		flag2++;
-    //this.lastShot = game.time.now;
-    plasblt.reset(boss.x, boss.y + boss.height / 2);
+  if (boss.alive && plasblt && game.time.now > firingDelay2 + 1000) {
+		plasblt.reset(boss.x, boss.y + boss.height / 2);
     plasblt.damageAmount = this.damageAmount;
     var angle = game.physics.arcade.moveToObject(plasblt, player, 400);
     plasblt.angle = game.math.radToDeg(angle);
