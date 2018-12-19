@@ -5,8 +5,8 @@ var Level2 = {
   preload: function() {
     //  We need this because the assets are on github pages
     //  Remove the next 2 lines if running locally
-    //	game.load.baseURL = 'https://fabianhoegger.github.io/Shooter/';
-    //game.load.crossOrigin = 'anonymous';
+    game.load.baseURL = 'https://fabianhoegger.github.io/Shooter/';
+    game.load.crossOrigin = 'anonymous';
     game.load.image('bluesky', 'assets/bluesky.png');
 
     game.load.image('ship', 'assets/ship.png');
